@@ -7,9 +7,9 @@
   replayable PoC, fix.
 - `POC-REPLAY.md` — exact call-read replay steps (this file's companion).
 - `TRIAGE-LOG.md` — everything else reviewed and killed, with reasons
-  (Slither-equivalent manual triage on 22 live Clarity contracts, IDOR claim
-  killed as out-of-scope + public-data).
+  (manual triage on 22 live Clarity contracts).
 
 ## Status
 - [x] Found + verified live on-chain (stacks_tip ~9059439)
+- [x] Re-verified live 2026-09-26 @ stacks_tip 9069597 — all values unchanged
 - [x] Duplicate check vs PoX-5 audit (zero mentions — not a duplicate)

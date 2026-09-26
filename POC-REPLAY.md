@@ -9,11 +9,11 @@ with body `{"sender":"<any-principal>","arguments":[]}`.
 | 1 | `stx-reserve-v2/get-escrow-cores` | 4 principals: btc-v1, btc-v2, btc-v3, ststxbtc-v1 — **no ststxbtc-v2** |
 | 2 | `stacking-dao-core-ststxbtc-v2/get-shutdown-deposits` | `0x04` (false = deposits OPEN) |
 | 3 | `stacking-dao-core-ststxbtc-v2/get-shutdown-init-withdraw` | `0x04` (false = withdrawals OPEN) |
-| 4 | `GET /extended/v1/address/SP4SZE.../stacking-dao-core-ststxbtc-v2/balances` | `ststxbtc-token-v2` balance ≈ 168,818,353,752 (uncounted escrow) |
+| 4 | `GET /extended/v1/address/SP4SZE.../stacking-dao-core-ststxbtc-v2/balances` | `ststxbtc-token-v2` balance = 168,818,353,752 (uncounted escrow) |
 | 5 | `stx-reserve-v2/get-escrowed-ststxbtc` | 32,655,750,287 (missing step-4 amount) |
-| 6 | `ststxbtc-token-v2/get-total-supply` | S |
-| 7 | `stx-reserve-v2/get-stx-for-ststxbtc` | Must equal S − step-5 (proves formula path) |
-| 8 | `data-stx-v2/get-stx-per-ststx` | 1,187,180 (overstated) vs fair 1,183,019 computed as (total-stx − (S − step-5 − step-4)) adjusted |
+| 6 | `ststxbtc-token-v2/get-total-supply` | `(ok u26983585069526)` |
+| 7 | `stx-reserve-v2/get-stx-for-ststxbtc` | 1,684,442,023,239 microSTX — live active-backing leg, overstated (step-4 never enters the formula) |
+| 8 | `data-stx-v2/get-stx-per-ststx` | 1,187,180 live vs 1,183,019 fair (recomputed with the missing 168,818,353,752 escrow included) |
 
 Windows PowerShell replay (save body once):
 ```powershell
