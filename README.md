@@ -6,8 +6,6 @@
   +35.18bps on every exit. Root cause, live-verified numbers, attack path,
   replayable PoC, fix.
 - `POC-REPLAY.md` — exact call-read replay steps (this file's companion).
-- `TRIAGE-LOG.md` — everything else reviewed and killed, with reasons
-  (manual triage on 22 live Clarity contracts).
 
 ## Status
 - [x] Found + verified live on-chain (stacks_tip ~9059439)
